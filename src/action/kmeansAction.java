@@ -29,6 +29,8 @@ public class kmeansAction extends ActionSupport{
 	public String update(){
 		ArrayList distanceList=new ArrayList(20);
 		ArrayList kList=new ArrayList(20);
+		
+		
 		resultList = (ArrayList)kmeansservice.getResult();
 		Map<String,List> room = new HashMap<String,List>();
 		for (KMeansResult  o:resultList){
@@ -39,7 +41,6 @@ public class kmeansAction extends ActionSupport{
 		room.put("distanceList", distanceList);
 		try {
 			this.result=JSONUtil.serialize(room).toString();
-			System.out.println(result);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

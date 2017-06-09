@@ -31,7 +31,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<li><a href="directors.jsp">导演</a></li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					数据展示
 					<b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu">

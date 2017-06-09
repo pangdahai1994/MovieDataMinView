@@ -38,7 +38,9 @@ $(function () {
             text: '不同k值下点到聚类中心的距离之和'
         },
         xAxis: {
-            categories: ['K']
+        	title: {
+                text: 'K值'
+            },
         },
         yAxis: {
             title: {
@@ -54,7 +56,7 @@ $(function () {
             }
         },
         series: [{
-            name: 'k',
+            name: '总距离',
             data: []
         }]
     });
@@ -78,9 +80,9 @@ $(function () {
 	</div>
 	<div>
 		<ul class="nav navbar-nav">
-			<li><a href="movies.jsp">电影</a></li>
-			<li><a href="actors.jsp">演员</a></li>
-			<li><a href="directors.jsp">导演</a></li>
+			<li><a href="RankAction!movieRank">电影</a></li>
+			<li><a href="RankAction!actorRank">演员</a></li>
+			<li><a href="RankAction!directorRank">导演</a></li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					数据展示
@@ -103,8 +105,9 @@ $(function () {
 	<div class="jumbotron">
 				<div id="kresultcontainer"   style="min-width: 400px; height: 500px; margin: 0 auto">
 				</div>
+				</br>
 				<p>
-					 <a class="btn btn-primary btn-large" href="#">Learn more</a>
+					 <a class="btn btn-primary btn-large" href="k_means.jsp">刷新</a>
 				</p>
 	</div>
 </nav>
